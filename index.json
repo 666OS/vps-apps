@@ -1,0 +1,9 @@
+[
+  {
+    "id": "hello-world",
+    "name": "Hello World",
+    "port": "8080",
+    "tag": "示例应用",
+    "desc": "轻量 Web 连通性测试服务"
+  }
+]

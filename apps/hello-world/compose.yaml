@@ -1,0 +1,14 @@
+x-vps:
+  name: Hello World
+  tag: 示例应用
+  desc: 轻量 Web 连通性测试服务
+
+services:
+  hello-world:
+    image: nginxdemos/hello
+    container_name: hello-world
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:80"
+    volumes:
+      - ./data:/data
