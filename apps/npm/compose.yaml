@@ -1,0 +1,20 @@
+x-vps:
+  name: Nginx Proxy Manager
+  tag: 网络工具
+  desc: Nginx 可视化反向代理管理工具
+  port: 81
+  auth: admin@example.com / changeme
+
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: npm
+    restart: unless-stopped
+    ports:
+      - "${APP_HOST:-0.0.0.0}:80:80"
+      - "${APP_HOST:-0.0.0.0}:443:443"
+      - "${APP_HOST:-0.0.0.0}:${APP_PORT:-81}:81"
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+

@@ -4,6 +4,15 @@
     "name": "Hello World",
     "port": "8080",
     "tag": "示例应用",
-    "desc": "轻量 Web 连通性测试服务"
+    "desc": "轻量 Web 连通性测试服务",
+    "auth": ""
+  },
+  {
+    "id": "npm",
+    "name": "Nginx Proxy Manager",
+    "port": "81",
+    "tag": "网络工具",
+    "desc": "Nginx 可视化反向代理管理工具",
+    "auth": "admin@example.com / changeme"
   }
 ]
