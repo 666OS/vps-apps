@@ -1,11 +1,30 @@
 [
   {
+    "id": "cloudflared",
+    "name": "Cloudflared",
+    "port": "-",
+    "tag": "网络工具",
+    "desc": "Cloudflare Zero Trust 穿透隧道",
+    "auth": "需绑定 Cloudflare 控制台生成的隧道令牌",
+    "url": "https://one.dash.cloudflare.com"
+  },
+  {
     "id": "hello-world",
     "name": "Hello World",
     "port": "8080",
     "tag": "示例应用",
     "desc": "轻量 Web 连通性测试服务",
-    "auth": ""
+    "auth": "",
+    "url": "https://hub.docker.com/r/nginxdemos/hello"
+  },
+  {
+    "id": "memos",
+    "name": "Memos",
+    "port": "5230",
+    "tag": "知识笔记",
+    "desc": "隐私优先的轻量卡片笔记",
+    "auth": "首位访问者直接注册为管理员",
+    "url": "https://usememos.com"
   },
   {
     "id": "npm",
@@ -13,6 +32,25 @@
     "port": "81",
     "tag": "网络工具",
     "desc": "Nginx 可视化反向代理管理工具",
-    "auth": "admin@example.com / changeme"
+    "auth": "admin@example.com / changeme",
+    "url": "https://nginxproxymanager.com"
+  },
+  {
+    "id": "uptime-kuma",
+    "name": "Uptime Kuma",
+    "port": "3001",
+    "tag": "运维监控",
+    "desc": "开箱即用的服务监控与状态页",
+    "auth": "首位访问者直接注册管理员",
+    "url": "https://uptime.kuma.pet"
+  },
+  {
+    "id": "vaultwarden",
+    "name": "Vaultwarden",
+    "port": "8088",
+    "tag": "安全工具",
+    "desc": "自建密码管理器 (需 HTTPS)",
+    "auth": "首位访问者直接注册为管理员",
+    "url": "https://github.com/dani-garcia/vaultwarden"
   }
 ]

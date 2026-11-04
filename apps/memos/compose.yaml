@@ -1,0 +1,18 @@
+x-vps:
+  name: Memos
+  tag: 知识笔记
+  desc: 隐私优先的轻量卡片笔记
+  url: https://usememos.com
+  port: 5230
+  auth: 首位访问者直接注册为管理员
+
+services:
+  memos:
+    image: neosmemo/memos:stable
+    container_name: memos
+    restart: unless-stopped
+    ports:
+      - "${APP_HOST:-0.0.0.0}:${APP_PORT:-5230}:5230"
+    volumes:
+      - ./data:/var/opt/memos
+

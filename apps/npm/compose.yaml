@@ -2,6 +2,7 @@ x-vps:
   name: Nginx Proxy Manager
   tag: 网络工具
   desc: Nginx 可视化反向代理管理工具
+  url: https://nginxproxymanager.com
   port: 81
   auth: admin@example.com / changeme
 

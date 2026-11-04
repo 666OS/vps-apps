@@ -2,6 +2,7 @@ x-vps:
   name: Hello World
   tag: 示例应用
   desc: 轻量 Web 连通性测试服务
+  url: https://hub.docker.com/r/nginxdemos/hello
 
 services:
   hello-world:

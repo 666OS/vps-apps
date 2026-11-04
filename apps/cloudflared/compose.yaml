@@ -1,0 +1,17 @@
+x-vps:
+  name: Cloudflared
+  tag: 网络工具
+  desc: Cloudflare Zero Trust 穿透隧道
+  url: https://one.dash.cloudflare.com
+  port: "-"
+  auth: 需绑定 Cloudflare 控制台生成的隧道令牌
+
+services:
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN:-}
+

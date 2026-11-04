@@ -1,0 +1,20 @@
+x-vps:
+  name: Vaultwarden
+  tag: 安全工具
+  desc: 自建密码管理器 (需 HTTPS)
+  url: https://github.com/dani-garcia/vaultwarden
+  port: 8088
+  auth: 首位访问者直接注册为管理员
+
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+    environment:
+      - WEBSOCKET_ENABLED=true
+    ports:
+      - "${APP_HOST:-0.0.0.0}:${APP_PORT:-8088}:80"
+    volumes:
+      - ./data:/data
+
