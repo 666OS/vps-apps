@@ -9,6 +9,6 @@ services:
     container_name: hello-world
     restart: unless-stopped
     ports:
-      - "${APP_PORT:-8080}:80"
+      - "${APP_HOST:-0.0.0.0}:${APP_PORT:-8080}:80"
     volumes:
       - ./data:/data
