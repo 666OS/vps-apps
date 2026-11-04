@@ -1,0 +1,13 @@
+# VPS-Apps: Docker Application Catalog for LLMs
+
+> Curated Docker Compose application templates distributed for VPS-SH engine.
+> Deploy command syntax: vs app_install <id> [port]
+
+## Applications
+
+- **cloudflared** (Cloudflared): Cloudflare Zero Trust 穿透隧道 [初始账密: 需绑定 Cloudflare 控制台生成的隧道令牌] -> `vs app_install cloudflared`
+- **hello-world** (Hello World): 轻量 Web 连通性测试服务 (默认端口: 8080) -> `vs app_install hello-world 8080`
+- **memos** (Memos): 隐私优先的轻量卡片笔记 (默认端口: 5230) [初始账密: 首位访问者直接注册为管理员] -> `vs app_install memos 5230`
+- **npm** (Nginx Proxy Manager): Nginx 可视化反向代理管理工具 (默认端口: 81) [初始账密: admin@example.com / changeme] -> `vs app_install npm 81`
+- **uptime-kuma** (Uptime Kuma): 开箱即用的服务监控与状态页 (默认端口: 3001) [初始账密: 首位访问者直接注册管理员] -> `vs app_install uptime-kuma 3001`
+- **vaultwarden** (Vaultwarden): 自建密码管理器 (需 HTTPS) (默认端口: 8088) [初始账密: 首位访问者直接注册为管理员] -> `vs app_install vaultwarden 8088`
