@@ -1,3 +1,11 @@
+x-vps:
+  name: Magpie
+  tag: AI 网关
+  desc: 统一多模型 API 网关与编码 Agent 管理面板 (建议反代 HTTPS)
+  url: https://usemagpie.ai/docs/docker
+  port: 3430
+  auth: 访问 /?k=<密钥> (自动生成并保存于 .env)
+
 services:
   magpie:
     image: ghcr.io/yetone/magpie:latest
@@ -6,22 +14,10 @@ services:
     restart: unless-stopped
     stop_grace_period: 30s
     ports:
-      - "${APP_PORT:-3430}:3430"
+      - "${APP_HOST:-0.0.0.0}:${APP_PORT:-3430}:3430"
     environment:
       - MAGPIE_DRAIN=20
+      - MAGPIE_WEB_KEY=${APP_PASSWORD}
     volumes:
       - ./data:/config
-    entrypoint:
-      - /bin/sh
-      - -c
-      - |
-        set -e
-        mkdir -p /config/home /config/cache /config/data /config/state
-        if [ -z "$${MAGPIE_WEB_KEY:-}" ]; then
-          if [ ! -s /config/.web_key ]; then
-            od -An -tx1 -N16 /dev/urandom | tr -d ' \n' > /config/.web_key
-            chmod 600 /config/.web_key
-          fi
-          export MAGPIE_WEB_KEY="$$(cat /config/.web_key)"
-        fi
-        exec /magpie web --addr 0.0.0.0:3430 --no-open
+    command: [web, --addr, 0.0.0.0:3430, --no-open]

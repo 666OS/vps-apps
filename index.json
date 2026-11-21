@@ -19,12 +19,12 @@
   },
   {
     "id": "magpie",
-    "name": "magpie",
+    "name": "Magpie",
     "port": "3430",
-    "tag": "",
-    "desc": "",
-    "auth": "",
-    "url": ""
+    "tag": "AI 网关",
+    "desc": "统一多模型 API 网关与编码 Agent 管理面板 (建议反代 HTTPS)",
+    "auth": "访问 /?k=<密钥> (自动生成并保存于 .env)",
+    "url": "https://usemagpie.ai/docs/docker"
   },
   {
     "id": "memos",
