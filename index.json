@@ -18,6 +18,15 @@
     "url": "https://hub.docker.com/r/nginxdemos/hello"
   },
   {
+    "id": "magpie",
+    "name": "magpie",
+    "port": "3430",
+    "tag": "",
+    "desc": "",
+    "auth": "",
+    "url": ""
+  },
+  {
     "id": "memos",
     "name": "Memos",
     "port": "5230",
