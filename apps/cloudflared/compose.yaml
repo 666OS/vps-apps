@@ -2,7 +2,7 @@ x-vps:
   name: Cloudflared
   tag: 网络工具
   desc: Cloudflare Zero Trust 穿透隧道
-  url: https://one.dash.cloudflare.com
+  url: https://dash.cloudflare.com/?to=/:account/tunnels
   port: "-"
   auth: 需绑定 Cloudflare 控制台生成的隧道令牌
 
